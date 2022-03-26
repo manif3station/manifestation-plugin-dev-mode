@@ -1,0 +1,10 @@
+version: '3.7'
+services:
+    web:
+        ports:
+            - 6060:8080
+        environment:
+            MF_PLUGIN_DeveloperMode: enabled
+            IN_RUN_FIX_PERLDB: plugin-cli DeveloperMode bin/fix.pl
+            DANCER_ENVIRONMENT: development
+            DEV: 1
